@@ -2,10 +2,10 @@ package RungeKutta;
 
 public class RungeKutta {
 	private static double f(double x0,double y0) {
-	  double x1 = Math.exp(x0);
-	  double x2 = Math.sin(x0);
-	  double x3 = Math.cos(x0);
-		return -20*(y0-x1*x2)+x1*(x2+x3);
+	  double xExp = Math.exp(x0);
+	  double xsin = Math.sin(x0);
+	  double xcos = Math.cos(x0);
+		return -20*(y0-xExp*xsin)+xExp*(xsin+xcos);
 	}
 	private static double z(double x1) {
 		return Math.exp(x1)*Math.sin(x1);
