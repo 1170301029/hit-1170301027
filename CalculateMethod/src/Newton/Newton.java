@@ -3,9 +3,22 @@ package Newton;
 import java.util.Map;
 
 public class Newton {
+    /**
+     * The interpolating function.
+     * 
+     * @param x the variable
+     * @return the function value
+     */
 	private static double fx(double x) {
 		return 32*Math.pow(x, 6)-48*Math.pow(x, 4)+18*Math.pow(x, 2)-1;
 	}
+	
+	/**
+	 * The dirived function.
+	 * 
+	 * @param x the variable
+	 * @return derived function value
+	 */
 	private static double dfx(double x) {
 		return 160*Math.pow(x, 5)-48*4*Math.pow(x, 3)+36*x;
 	}
@@ -18,25 +31,25 @@ public class Newton {
 			f = fx(x);
 			df = dfx(x);
 			if(Math.abs(f)<e1) {
-				System.out.println("µü´ú´ÎÊýn = "+n+" ,¸ùx*µÄ½üËÆÖµ£º"+x+" fx£º"+fx(x));
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½n = "+n+" ,ï¿½ï¿½x*ï¿½Ä½ï¿½ï¿½ï¿½Öµï¿½ï¿½"+x+" fxï¿½ï¿½"+fx(x));
 				return;
 			}
 			if(Math.abs(df)<e2) {
-				System.out.println("|DF|<e2Ê§°Ü£¡");
+				System.out.println("|DF|<e2Ê§ï¿½Ü£ï¿½");
 				return;
 			}
 			x1 = x-f/df;
 			if(Math.abs(x1-x)<e1) {
-				System.out.println("µü´ú´ÎÊýn = "+n+" ,¸ùx*µÄ½üËÆÖµ£º"+x1+" fx£º"+fx(x1));
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½n = "+n+" ,ï¿½ï¿½x*ï¿½Ä½ï¿½ï¿½ï¿½Öµï¿½ï¿½"+x1+" fxï¿½ï¿½"+fx(x1));
 				return;
 			}
 			x=x1;
 		}
-		System.out.println("Ê§°Ü£¡");
+		System.out.println("Ê§ï¿½Ü£ï¿½");
 		return;
 	}
 	public static void main(String[] args) {
-		System.out.println("question 2£º(2)");
+		System.out.println("question 2ï¿½ï¿½(2)");
 		int n=6;
 		for(int j=0;j<=n;j++) {
 			double x = Math.cos((2*j+1)*Math.PI/(2*n+2));
