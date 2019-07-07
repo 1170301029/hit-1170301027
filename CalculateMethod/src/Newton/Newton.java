@@ -22,6 +22,15 @@ public class Newton {
 	private static double dfx(double x) {
 		return 160*Math.pow(x, 5)-48*4*Math.pow(x, 3)+36*x;
 	}
+	/**
+	 * Newton method.
+	 *
+	 * @param a
+	 * @param e1
+	 * @param e2 
+	 * @param N
+	 * @return 
+	 */
 	private static void newton(double a,double e1,double e2, int N) {
 		double x=a;
 		double x1=0.0;
